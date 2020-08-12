@@ -5,9 +5,10 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Search } from "./views/search";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { Navbar, Navbardos } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -20,13 +21,17 @@ export const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-						<Navbar />
+					<Navbar />
+					<Navbardos />
 					<Switch>
 						<Route exact path="/">
 							<Home />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
+						</Route>
+						<Route exact path="/search">
+							<Search />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
