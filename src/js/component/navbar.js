@@ -2,25 +2,55 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-export const Navbar = () => {
+export const Titleandsearch = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
+		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+			<a className="navbar-brand col-xs-6 col-md-4" href="#">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgL76ptpnEisIFdlMX8vfR2gp6H7re5JbkhQ&usqp=CAU"
+					width="30"
+					height="30"
+					className="d-inline-block align-top"
+					alt=""
+					loading="lazy"
+				/>
+				Website title name
+			</a>
+			<button
+				className="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span className="navbar-toggler-icon" />
+			</button>
+
+			<div className="col-6">
+				<form className="form-inline">
+					<input className="form-control mr-2 col-8" type="search" placeholder="" aria-label="Search" />
+					<button className="btn btn-outline-dark my-2 my-0" type="submit">
+						Search
+					</button>
+				</form>
 			</div>
 		</nav>
 	);
 };
-export const Navbardos = () => {
+export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+		<nav className="navbar navbar-expand-lg navbar-light bg-success">
 			<a className="navbar-brand" href="#">
-				Navbar
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgL76ptpnEisIFdlMX8vfR2gp6H7re5JbkhQ&usqp=CAU"
+					width="30"
+					height="30"
+					className="d-inline-block align-top"
+					alt=""
+					loading="lazy"
+				/>
+				Website title name
 			</a>
 			<button
 				className="navbar-toggler"
@@ -42,7 +72,7 @@ export const Navbardos = () => {
 					</li>
 					<li className="nav-item">
 						<a className="nav-link" href="#">
-							Link
+							Community Recipes
 						</a>
 					</li>
 					<li className="nav-item dropdown">
@@ -54,30 +84,31 @@ export const Navbardos = () => {
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
-							Dropdown
+							Username
 						</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a className="dropdown-item" href="#">
-								Action
+								My Recipes
 							</a>
 							<a className="dropdown-item" href="#">
-								Another action
+								My Reviews
+							</a>
+							<a className="dropdown-item" href="#">
+								My Favorites
+							</a>
+							<a className="dropdown-item" href="#">
+								Rewards
 							</a>
 							<div className="dropdown-divider" />
 							<a className="dropdown-item" href="#">
-								Something else here
+								Logout
 							</a>
 						</div>
 					</li>
-					<li className="nav-item">
-						<a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
-							Disabled
-						</a>
-					</li>
 				</ul>
 				<form className="form-inline my-2 my-lg-0">
-					<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-					<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+					<input className="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" />
+					<button className="btn btn-outline-dark my-2 my-sm-0" type="submit">
 						Search
 					</button>
 				</form>
