@@ -7,7 +7,7 @@ export const Titleandsearch = () => {
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<a className="navbar-brand col-xs-6 col-md-4" href="#">
 				<img
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgL76ptpnEisIFdlMX8vfR2gp6H7re5JbkhQ&usqp=CAU"
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fcute-funny-happy-vegetables-fruits_1270-440.jpg&f=1&nofb=1"
 					width="30"
 					height="30"
 					className="d-inline-block align-top"
