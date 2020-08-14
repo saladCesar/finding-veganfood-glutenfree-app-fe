@@ -29,7 +29,12 @@ export const Titleandsearch = () => {
 
 			<div className="col-6">
 				<form className="form-inline">
-					<input className="form-control mr-2 col-8" type="search" placeholder="" aria-label="Search" />
+					<input
+						className="form-control mr-2 col-8"
+						type="search"
+						placeholder="Supermarket, Restaurants..."
+						aria-label="Search"
+					/>
 					<button className="btn btn-outline-dark my-2 my-0" type="submit">
 						Search
 					</button>
