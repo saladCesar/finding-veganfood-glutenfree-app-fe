@@ -7,14 +7,14 @@ export const Titleandsearch = () => {
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<a className="navbar-brand col-xs-6 col-md-4" href="#">
 				<img
-					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fcute-funny-happy-vegetables-fruits_1270-440.jpg&f=1&nofb=1"
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._fsat6uTQCDr7ABAAdIvcwAAAA%26pid%3DApi&f=1"
 					width="30"
 					height="30"
 					className="d-inline-block align-top"
 					alt=""
 					loading="lazy"
 				/>
-				Website title name
+				Happy fun foods?
 			</a>
 			<button
 				className="navbar-toggler"
@@ -48,14 +48,14 @@ export const Navbar = () => {
 		<nav className="navbar navbar-expand-lg navbar-light bg-success">
 			<a className="navbar-brand" href="#">
 				<img
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgL76ptpnEisIFdlMX8vfR2gp6H7re5JbkhQ&usqp=CAU"
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._fsat6uTQCDr7ABAAdIvcwAAAA%26pid%3DApi&f=1"
 					width="30"
 					height="30"
 					className="d-inline-block align-top"
 					alt=""
 					loading="lazy"
 				/>
-				Website title name
+				Eat healthy, feel great!
 			</a>
 			<button
 				className="navbar-toggler"
@@ -78,6 +78,16 @@ export const Navbar = () => {
 					<li className="nav-item">
 						<a className="nav-link" href="#">
 							Community Recipes
+						</a>
+					</li>
+					<li className="nav-item">
+						<a className="nav-link" href="#">
+							Education
+						</a>
+					</li>
+					<li className="nav-item">
+						<a className="nav-link" href="#">
+							Join the community!
 						</a>
 					</li>
 					<li className="nav-item dropdown">
@@ -111,12 +121,6 @@ export const Navbar = () => {
 						</div>
 					</li>
 				</ul>
-				<form className="form-inline my-2 my-lg-0">
-					<input className="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" />
-					<button className="btn btn-outline-dark my-2 my-sm-0" type="submit">
-						Search
-					</button>
-				</form>
 			</div>
 		</nav>
 	);
