@@ -1,11 +1,12 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			restaurant: [
 				{
 					title: "FIRST",
-					background: "white",
-					initial: "white"
+					address: "full address",
+					pricing: "money",
+					hours: "operating hours"
 				},
 				{
 					title: "SECOND",
