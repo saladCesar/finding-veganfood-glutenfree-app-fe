@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-console.log("Helllooooo");
 export const Education = props => {
 	const { store, actions } = useContext(Context);
 	useEffect();
