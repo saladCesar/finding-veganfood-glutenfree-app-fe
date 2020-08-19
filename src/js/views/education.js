@@ -18,8 +18,7 @@ export const Education = props => {
 	// [props.match.params.theid]
 
 	return (
-		<>
-			{/* {"name" in store.single &&
+		/* {"name" in store.single &&
 				props.match.params.theid == store.single.url.match(/[/][0-9]+[/]/)[0].replace(/[/]/g, "") && (
 					<div className="jumbotron">
 						<div className="d-flex">
@@ -32,8 +31,12 @@ export const Education = props => {
 						<hr className="my-4" />
 						<p>{"This is the card info"}</p>
 					</div>
-				)} */}
-		</>
+				)} */
+		<Link to="/">
+			<button className="btn btn-primary btn-lg" href="#" role="button">
+				Back home
+			</button>
+		</Link>
 	);
 };
 
