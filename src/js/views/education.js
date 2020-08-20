@@ -6,14 +6,22 @@ import { Context } from "../store/appContext";
 export const Education = props => {
 	const { store, actions } = useContext(Context);
 	return (
-		<Link to="/">
-			<button className="btn btn-primary btn-lg" href="#" role="button">
-				Back home
-			</button>
-		</Link>
+		{
+			/* <div className="row justify-content-center">
+                <div className="col">
+                <p>Helloooo</p>
+                </div>
+            </div> */
+		},
+		(
+			<Link to="/">
+				<button className="btn btn-success btn-lg" href="#" role="button">
+					Back home
+				</button>
+			</Link>
+		)
 	);
 };
-
-Education.propTypes = {
-	match: PropTypes.object
+Education.PropTypes = {
+	match: PropTypes.objects
 };

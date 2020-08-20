@@ -20,6 +20,6 @@ export const Login = props => {
 	);
 };
 
-JoinLogin.propTypes = {
+Login.propTypes = {
 	match: PropTypes.object
 };
