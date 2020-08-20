@@ -8,6 +8,7 @@ import { MyAccount } from "./views/myaccount";
 import { Single } from "./views/single";
 import { Search } from "./views/search";
 import { CommunityRecipes } from "./views/communityrecipes";
+import { JoinTheCommunity } from "./views/jointhecommunity";
 import injectContext from "./store/appContext";
 
 import { Titleandsearch, Navbar } from "./component/navbar";
@@ -22,34 +23,37 @@ export const Layout = () => {
 	return (
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Titleandsearch />
-					<Navbar />
-					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/communityrecipes">
-							<CommunityRecipes />
-						</Route>
-						<Route exact path="/search">
-							<Search />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
-						<Route exact path="/education" component={Education}>
-							<Education />
-						</Route>
-						<Route exact path="/myaccount">
-							<MyAccount />
-						</Route>
-						<Route>
-							<h1>Not found!</h1>
-						</Route>
-					</Switch>
-					<Footer />
-				</ScrollToTop>
+				{/* <ScrollToTop> */}
+				<Titleandsearch />
+				<Navbar />
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route exact path="/communityrecipes">
+						<CommunityRecipes />
+					</Route>
+					<Route exact path="/search">
+						<Search />
+					</Route>
+					<Route exact path="/single/:theid">
+						<Single />
+					</Route>
+					<Route exact path="/jointhecommunity">
+						<JoinTheCommunity />
+					</Route>
+					<Route exact path="/education" component={Education}>
+						<Education />
+					</Route>
+					<Route exact path="/myaccount">
+						<MyAccount />
+					</Route>
+					<Route>
+						<h1>Not found!</h1>
+					</Route>
+				</Switch>
+				<Footer />
+				{/* </ScrollToTop> */}
 			</BrowserRouter>
 		</div>
 	);
