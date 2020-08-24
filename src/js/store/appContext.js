@@ -31,7 +31,7 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
-			// 	state.actions.getRestaurants();
+			state.actions.loadProfile();
 			// }, []);
 			// useEffect(() => {
 			// 	state.actions.getEducation();

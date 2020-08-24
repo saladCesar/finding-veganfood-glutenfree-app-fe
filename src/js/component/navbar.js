@@ -35,9 +35,9 @@ export const Titleandsearch = () => {
 						placeholder="Supermarket, Restaurants..."
 						aria-label="Search"
 					/>
-					<button className="btn btn-outline-dark my-2 my-0" type="submit">
-						Search
-					</button>
+					<Link to="/restaurants">
+						<button className="btn btn-outline-dark my-2 my-0">Search</button>
+					</Link>
 				</form>
 			</div>
 		</nav>
@@ -85,6 +85,11 @@ export const Navbar = () => {
 					<li className="nav-item">
 						<Link to="/education">
 							<button className="btn">Education</button>
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link to="/addrestaurant">
+							<button className="btn">Upload your restaurant!</button>
 						</Link>
 					</li>
 					<li className="nav-item">

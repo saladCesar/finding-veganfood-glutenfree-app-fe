@@ -13,6 +13,8 @@ import injectContext from "./store/appContext";
 
 import { Titleandsearch, Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Restaurants } from "./views/restaurants";
+import { AddRestaurant } from "./views/addrestaurant";
 
 //create your first component
 export const Layout = () => {
@@ -41,6 +43,12 @@ export const Layout = () => {
 					</Route>
 					<Route exact path="/jointhecommunity">
 						<JoinTheCommunity />
+					</Route>
+					<Route exact path="/restaurants">
+						<Restaurants />
+					</Route>
+					<Route exact path="/addrestaurant">
+						<AddRestaurant />
 					</Route>
 					<Route exact path="/education" component={Education}>
 						<Education />
