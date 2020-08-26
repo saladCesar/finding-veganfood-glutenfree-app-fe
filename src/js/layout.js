@@ -15,6 +15,7 @@ import { Titleandsearch, Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Restaurants } from "./views/restaurants";
 import { AddRestaurant } from "./views/addrestaurant";
+import { Createprofile } from "./views/createprofile";
 
 //create your first component
 export const Layout = () => {
@@ -52,6 +53,9 @@ export const Layout = () => {
 					</Route>
 					<Route exact path="/education" component={Education}>
 						<Education />
+					</Route>
+					<Route exact path="/createprofile">
+						<Createprofile />
 					</Route>
 					<Route exact path="/myaccount">
 						<MyAccount />

@@ -125,6 +125,11 @@ export const Navbar = () => {
 								Rewards
 							</a>
 							<div className="dropdown-divider" />
+							<Link to="/createprofile">
+								<button className="dropdown-item" href="#">
+									Not a member? Sign up!
+								</button>
+							</Link>
 							<a className="dropdown-item" href="#">
 								Logout
 							</a>

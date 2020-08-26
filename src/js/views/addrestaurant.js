@@ -15,7 +15,7 @@ export const AddRestaurant = () => {
 			address: address
 		};
 		console.log(`This is the object ${newRestaurantData.full_name}`);
-		let success = await actions.createContact(newContactData);
+		let success = await actions.createContact(newRestaurantData);
 		if (success) {
 			history.push("/");
 		} else {
