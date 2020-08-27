@@ -2,7 +2,8 @@ const backendUrl = "https://3000-daf7f843-ecce-4451-908c-d0076cb8f219.ws-us02.gi
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			restaurant: [
+			token: null,
+			demo: [
 				{
 					title: "FIRST",
 					address: "full address",
@@ -17,6 +18,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			login: (parameter1, parameter2) => {
+				fetch(`${backendUrl}login`, {
+					method: "POST",
+					headers: {
+						"Content-type": "application/json"
+					},
+
+					body: JSON.stringify({
+						email: parameter1,
+						password: parameter2
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						if (typeof token.msg != "undefined") {
+							//Notify.error(token.msg);
+						} else {
+							setStore({ token: token.jwt });
+						}
+					});
+			},
+			logout: () => {
+				setStore({ token: null });
+			},
 			createContact: async newContactData => {
 				const actions = getActions();
 				newContactData["agenda_slug"] = "kev32";

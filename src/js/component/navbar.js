@@ -110,7 +110,9 @@ export const Navbar = () => {
 						</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a className="dropdown-item" href="#">
-								Log in
+								<Link to="/login">
+									<button className="btn"> Log in</button>
+								</Link>
 							</a>
 							<a className="dropdown-item" href="#">
 								My Recipes
@@ -130,9 +132,16 @@ export const Navbar = () => {
 									Not a member? Sign up!
 								</button>
 							</Link>
-							<a className="dropdown-item" href="#">
-								Logout
-							</a>
+							<div className="dropdown-item">
+								Log out
+								{/* {store.token != null ? (
+									<button onClick={() => actions.logout()} className="btn btn-ptimary">
+										Logout
+									</button>
+								) : (
+									<button className="btn btn-primary">Login</button>
+								)} */}
+							</div>
 						</div>
 					</li>
 				</ul>
