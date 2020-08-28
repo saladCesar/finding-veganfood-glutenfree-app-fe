@@ -7,13 +7,13 @@ export const Signup = () => {
 	// const [email, setEmail] = useState("");
 	return (
 		<>
-			<div className="Jumbotron">
+			<div className="col">
 				<h1 className="display-4">Signup</h1>
 				<p className="lead">This is your login section!!</p>
 				<hr className="my-4" />
 				<p>We are going to login</p>
-				<a className="btn btn-danger btn-lg" href="#" role="button">
-					DangerZone
+				<a className="btn btn-primary btn-lg" href="#" role="button">
+					Login
 				</a>
 			</div>
 		</>
