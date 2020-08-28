@@ -16,6 +16,7 @@ import { Footer } from "./component/footer";
 import { Restaurants } from "./views/restaurants";
 import { AddRestaurant } from "./views/addrestaurant";
 import { Createprofile } from "./views/createprofile";
+import { Login } from "./views/login";
 
 //create your first component
 export const Layout = () => {
@@ -47,6 +48,9 @@ export const Layout = () => {
 					</Route>
 					<Route exact path="/restaurants">
 						<Restaurants />
+					</Route>
+					<Route exact path="/login">
+						<Login />
 					</Route>
 					<Route exact path="/addrestaurant">
 						<AddRestaurant />
