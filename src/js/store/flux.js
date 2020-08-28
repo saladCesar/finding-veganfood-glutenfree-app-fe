@@ -2,20 +2,20 @@ const backendUrl = "https://3000-daf7f843-ecce-4451-908c-d0076cb8f219.ws-us02.gi
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			token: null,
-			demo: [
-				{
-					title: "FIRST",
-					address: "full address",
-					pricing: "money",
-					hours: "operating hours"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			token: null
+			// demo: [
+			// 	{
+			// 		title: "FIRST",
+			// 		address: "full address",
+			// 		pricing: "money",
+			// 		hours: "operating hours"
+			// 	},
+			// 	{
+			// 		title: "SECOND",
+			// 		background: "white",
+			// 		initial: "white"
+			// 	}
+			// ]
 		},
 		actions: {
 			login: (parameter1, parameter2) => {

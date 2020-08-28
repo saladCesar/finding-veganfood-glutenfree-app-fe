@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { propTypes } from "react-bootstrap/esm/Image";
+import { Context } from "../store/appContext";
 
 export const Titleandsearch = () => {
 	return (
@@ -44,6 +46,7 @@ export const Titleandsearch = () => {
 	);
 };
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-success">
 			<a className="navbar-brand" href="#">
@@ -132,15 +135,14 @@ export const Navbar = () => {
 									Not a member? Sign up!
 								</button>
 							</Link>
-							<div className="dropdown-item">
-								Log out
-								{/* {store.token != null ? (
-									<button onClick={() => actions.logout()} className="btn btn-ptimary">
+							<div className="dropdown-item ml-auto">
+								{store.token != null ? (
+									<button onClick={() => actions.logout()} className="btn btn-primary">
 										Logout
 									</button>
 								) : (
 									<button className="btn btn-primary">Login</button>
-								)} */}
+								)}
 							</div>
 						</div>
 					</li>
