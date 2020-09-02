@@ -18,6 +18,58 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// ]
 		},
 		actions: {
+			createRecipe: (param1, param2, param3, param4, param5, param6) => {
+				fetch(`${backendUrl}communityrecipes`, {
+					method: "POST",
+					headers: {
+						"Content-type": "application/json"
+					},
+
+					body: JSON.stringify({
+						profile_id: param1,
+						diet: param2,
+						images: param3,
+						recipe_ingredients: param4,
+						video_recipe_link: param5,
+						recipe_description: param6
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						if (typeof token.msg != "undefined") {
+							//Notify.error(token.msg);
+						} else {
+							setStore({ token: token.jwt });
+						}
+					});
+			},
+			addRestaurant: (param1, param2, param3, param4, param5, param6, param7, param8) => {
+				fetch(`${backendUrl}restaurants`, {
+					method: "POST",
+					headers: {
+						"Content-type": "application/json"
+					},
+
+					body: JSON.stringify({
+						name: param1,
+						diet: param2,
+						address: param3,
+						email: param4,
+						phone_number: param5,
+						operational_hours: param6,
+						pricing: param7,
+						website: param8
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						if (typeof token.msg != "undefined") {
+							//Notify.error(token.msg);
+						} else {
+							setStore({ token: token.jwt });
+						}
+					});
+			},
 			login: (parameter1, parameter2) => {
 				fetch(`${backendUrl}login`, {
 					method: "POST",

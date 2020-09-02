@@ -118,7 +118,9 @@ export const Navbar = () => {
 								</Link>
 							</a>
 							<a className="dropdown-item" href="#">
-								My Recipes
+								<Link to="/createrecipe">
+									<button className="btn"> Upload recipe</button>
+								</Link>
 							</a>
 							<a className="dropdown-item" href="#">
 								My Reviews

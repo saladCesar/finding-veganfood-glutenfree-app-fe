@@ -7,12 +7,13 @@ export const Createprofile = () => {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		event.stopPropagation();
-		console.log(`submit here ${fullName} ${diet} ${rewards} ${email} ${phone} ${avatar}`);
+		console.log(`submit here ${fullName} ${diet} ${rewards} ${email} ${password} ${phone} ${avatar}`);
 		var newProfileData = {
 			name: fullName,
 			diet: diet,
 			rewards: rewards,
 			email: email,
+			password: password,
 			phone_number: phone,
 			user_avatar: avatar
 		};
@@ -28,6 +29,7 @@ export const Createprofile = () => {
 	const [diet, setDiet] = useState("");
 	const [rewards, setRewards] = useState("");
 	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	const [phone, setPhone] = useState("");
 	const [avatar, setAvatar] = useState("");
 	var history = useHistory();
@@ -35,7 +37,7 @@ export const Createprofile = () => {
 		<>
 			<div className="container">
 				<div>
-					<h1 className="text-center mt-5">Please create your profile amigo!</h1>
+					<h1 className="text-center mt-5">Please create your profilecrea</h1>
 					<form onSubmit={handleSubmit}>
 						<div className="form-group">
 							<label>Full Name</label>
@@ -75,6 +77,16 @@ export const Createprofile = () => {
 								placeholder="Enter address"
 								value={email}
 								onChange={event => setEmail(event.target.value)}
+							/>
+						</div>
+						<div className="form-group">
+							<label>Password</label>
+							<input
+								type="text"
+								className="form-control"
+								placeholder="Enter address"
+								value={password}
+								onChange={event => setPassword(event.target.value)}
 							/>
 						</div>
 						<div className="form-group">

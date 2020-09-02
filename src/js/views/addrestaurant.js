@@ -7,14 +7,17 @@ export const AddRestaurant = () => {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		event.stopPropagation();
-		console.log(`submit here ${fullName} ${email} ${phone} ${address}`);
+		console.log(`submit here ${name} ${diet} ${address} ${email} ${phone} ${operational_hours} ${website}`);
 		var newRestaurantData = {
-			full_name: fullName,
+			name: name,
+			diet: diet,
+			address: address,
 			email: email,
 			phone: phone,
-			address: address
+			operational_hours: operational_hours,
+			website: website
 		};
-		console.log(`This is the object ${newRestaurantData.full_name}`);
+		console.log(`This is the object ${newRestaurantData.name}`);
 		let success = await actions.createContact(newRestaurantData);
 		if (success) {
 			history.push("/");
@@ -22,24 +25,34 @@ export const AddRestaurant = () => {
 			window.alert("Something went wrong, check your input and try again.");
 		}
 	}
-	const [fullName, setFullName] = useState("");
+	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
 	const [address, setAddress] = useState("");
+	const [operational_hours, setOperational_hours] = useState("");
+	const [website, setWebsite] = useState("");
+	const [diet, setDiet] = useState("");
 	var history = useHistory();
 	return (
 		<div className="container">
 			<div>
-				<h1 className="text-center mt-5">Add a new contact</h1>
+				<h1 className="text-center mt-5">Add your Restaurant</h1>
+				<div className="text-right">
+					<Link to="/restaurantpolicy">
+						<button type="button" className="btn btn-dark">
+							Restaurant Policy
+						</button>
+					</Link>
+				</div>
 				<form onSubmit={handleSubmit}>
 					<div className="form-group">
-						<label>Full Name</label>
+						<label>Name of the Restaurant</label>
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Full Name"
-							value={fullName}
-							onChange={event => setFullName(event.target.value)}
+							placeholder="Restaurant Name"
+							value={name}
+							onChange={event => setName(event.target.value)}
 						/>
 					</div>
 					<div className="form-group">
@@ -70,6 +83,36 @@ export const AddRestaurant = () => {
 							placeholder="Enter address"
 							value={address}
 							onChange={event => setAddress(event.target.value)}
+						/>
+					</div>
+					<div className="form-group">
+						<label>Operarional hours</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Full Name"
+							value={operational_hours}
+							onChange={event => setOperational_hours(event.target.value)}
+						/>
+					</div>
+					<div className="form-group">
+						<label>Website</label>
+						<input
+							type="email"
+							className="form-control"
+							placeholder="www.example.com"
+							value={email}
+							onChange={event => setWebsite(event.target.value)}
+						/>
+					</div>
+					<div className="form-group">
+						<label>Diet</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Vegan - Gluten Free - Both"
+							value={diet}
+							onChange={event => setDiet(event.target.value)}
 						/>
 					</div>
 					<button type="submit" className="btn btn-primary form-control">
