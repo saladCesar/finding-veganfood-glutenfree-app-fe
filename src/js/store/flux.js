@@ -1,4 +1,4 @@
-const backendUrl = "https://3000-daf7f843-ecce-4451-908c-d0076cb8f219.ws-us02.gitpod.io/";
+const backendUrl = "https://3000-dbf17fc2-2eec-455c-a222-f45db57b35bb.ws-us02.gitpod.io/";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
