@@ -9,25 +9,61 @@ export const Jumbotron = () => {
 				<div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 					<div className="carousel-inner m">
 						<div className="carousel-item active">
-							<img
-								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.LYrsGFgMIXTKIX2U30lrqQHaHa%26pid%3DApi&f=1"
-								className="d-block w-50%"
-								alt=""
+							<div
+								className="image22"
+								style={{
+									backgroundImage: `url(
+								"https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F191101102722-vegan-diet-stock.jpg"
+							)`,
+									backgroundPosition: "center",
+									backgroundSize: "cover",
+									width: "100%",
+									height: "800px"
+								}}
 							/>
+							{/* <img
+								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.LYrsGFgMIXTKIX2U30lrqQHaHa%26pid%3DApi&f=1"
+								className="d-block w-100%"
+								alt=""
+							/> */}
 						</div>
 						<div className="carousel-item">
-							<img
+							<div
+								className="image22"
+								style={{
+									backgroundImage: `url(
+								"https://www.ecestaticos.com/image/clipping/74a0e7155ea6d31e964ef715002467b4/039-gluten-free-039-guia-nutricional-para-celiacos-en-el-extranjero.jpg"
+							)`,
+									backgroundPosition: "center",
+									backgroundSize: "cover",
+									width: "100%",
+									height: "800px"
+								}}
+							/>
+							{/* <img
 								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3Xv2jWJdAqyPxDP6uXp2qAHaFP%26pid%3DApi&f=1"
 								className="d-block height-75%"
 								alt=""
-							/>
+							/> */}
 						</div>
 						<div className="carousel-item">
-							<img
+							<div
+								className="image22"
+								style={{
+									backgroundImage: `url(
+								"https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F191101102722-vegan-diet-stock.jpg"
+							)`,
+									backgroundPosition: "center",
+									backgroundSize: "cover",
+									width: "100%",
+									height: "800px"
+								}}
+							/>
+							{/* <img
 								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.ENPnudD6erubROhWVPnZzgHaHa%26pid%3DApi&f=1"
 								className="d-block w-50%"
 								alt=""
-							/>
+							/> */}
 						</div>
 					</div>
 					<a

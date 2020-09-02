@@ -18,6 +18,7 @@ import { AddRestaurant } from "./views/addrestaurant";
 import { Createprofile } from "./views/createprofile";
 import { Login } from "./views/login";
 import { CreateRecipe } from "./views/createrecipe";
+import { RestaurantPolicy } from "./views/restaurantpolicy";
 
 //create your first component
 export const Layout = () => {
@@ -55,6 +56,9 @@ export const Layout = () => {
 					</Route>
 					<Route exact path="/addrestaurant">
 						<AddRestaurant />
+					</Route>
+					<Route exact path="/restaurantpolicy">
+						<RestaurantPolicy />
 					</Route>
 					<Route exact path="/education" component={Education}>
 						<Education />

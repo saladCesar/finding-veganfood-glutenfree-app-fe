@@ -37,6 +37,13 @@ export const AddRestaurant = () => {
 		<div className="container">
 			<div>
 				<h1 className="text-center mt-5">Add your Restaurant</h1>
+				<div className="text-right">
+					<Link to="/restaurantpolicy">
+						<button type="button" className="btn btn-dark">
+							Restaurant Policy
+						</button>
+					</Link>
+				</div>
 				<form onSubmit={handleSubmit}>
 					<div className="form-group">
 						<label>Name of the Restaurant</label>
