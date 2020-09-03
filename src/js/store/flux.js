@@ -1,8 +1,9 @@
-const backendUrl = "https://3000-dbf17fc2-2eec-455c-a222-f45db57b35bb.ws-us02.gitpod.io/";
+const backendUrl = "https://3000-c340f1e8-1798-4b26-832d-8713dea868db.ws-us02.gitpod.io/";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			token: null
+			token: null,
+			recipe: []
 			// demo: [
 			// 	{
 			// 		title: "FIRST",
@@ -18,30 +19,40 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// ]
 		},
 		actions: {
-			createRecipe: (param1, param2, param3, param4, param5, param6) => {
-				fetch(`${backendUrl}communityrecipes`, {
+			loadRecipes: () => {
+				const store = getStore();
+				fetch(`${backendUrl}recipe`, {
+					headers: {
+						"Content-type": "application/json",
+						Authorization: `Bearer ${store.token}`
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => setStore({ recipe: data }))
+					.catch(error => console.log(error));
+			},
+			createRecipe: recipeDictionary => {
+				const store = getStore();
+				fetch(`${backendUrl}recipe`, {
 					method: "POST",
 					headers: {
-						"Content-type": "application/json"
+						"Content-type": "application/json",
+						Authorization: `Bearer ${store.token}`
 					},
 
-					body: JSON.stringify({
-						profile_id: param1,
-						diet: param2,
-						images: param3,
-						recipe_ingredients: param4,
-						video_recipe_link: param5,
-						recipe_description: param6
-					})
-				})
-					.then(response => response.json())
-					.then(token => {
-						if (typeof token.msg != "undefined") {
-							//Notify.error(token.msg);
-						} else {
-							setStore({ token: token.jwt });
-						}
-					});
+					body: JSON.stringify(recipeDictionary)
+				}).then(response => {
+					if (response.ok) {
+						return true;
+					} else {
+						return false;
+					}
+				});
 			},
 			addRestaurant: (param1, param2, param3, param4, param5, param6, param7, param8) => {
 				fetch(`${backendUrl}restaurants`, {

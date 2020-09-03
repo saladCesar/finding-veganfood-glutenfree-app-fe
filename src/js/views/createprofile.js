@@ -7,11 +7,10 @@ export const Createprofile = () => {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		event.stopPropagation();
-		console.log(`submit here ${fullName} ${diet} ${rewards} ${email} ${password} ${phone} ${avatar}`);
+		console.log(`submit here ${fullName} ${diet} ${email} ${password} ${phone} ${avatar}`);
 		var newProfileData = {
 			name: fullName,
 			diet: diet,
-			rewards: rewards,
 			email: email,
 			password: password,
 			phone_number: phone,
@@ -27,7 +26,6 @@ export const Createprofile = () => {
 	}
 	const [fullName, setFullName] = useState("");
 	const [diet, setDiet] = useState("");
-	const [rewards, setRewards] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [phone, setPhone] = useState("");
@@ -57,16 +55,6 @@ export const Createprofile = () => {
 								placeholder="Vegan - Gluten Free"
 								value={diet}
 								onChange={event => setDiet(event.target.value)}
-							/>
-						</div>
-						<div className="form-group">
-							<label>Rewards</label>
-							<input
-								type="phone"
-								className="form-control"
-								placeholder="Enter phone"
-								value={rewards}
-								onChange={event => setRewards(event.target.value)}
 							/>
 						</div>
 						<div className="form-group">

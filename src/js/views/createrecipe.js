@@ -4,56 +4,43 @@ import { Context } from "../store/appContext";
 
 export const CreateRecipe = () => {
 	const { store, actions } = useContext(Context);
+	const [diet, setDiet] = useState("");
+	const [images, setImages] = useState("");
+	const [recipeIngredients, setRecipeIngredients] = useState("");
+	const [videoRecipeLink, setVideoRecipeLink] = useState("");
+	const [recipeDescription, setRecipeDescription] = useState("");
+	var history = useHistory();
 	async function handleSubmit(event) {
 		event.preventDefault();
 		event.stopPropagation();
-		console.log(
-			`submit here ${profile_id} ${diet} ${images} ${recipe_ingredients} ${video_recipe_link} ${recipe_description}`
-		);
+		console.log(`submit here ${diet} ${images} ${recipeIngredients} ${videoRecipeLink} ${recipeDescription}`);
 		var newRecipeData = {
-			profile_id: profile_id,
 			diet: diet,
 			images: images,
-			recipe_ingredients: recipe_ingredients,
-			video_recipe_link: video,
-			recipe_description: description
+			recipe_ingredients: recipeIngredients,
+			video_recipe_link: videoRecipeLink,
+			recipe_description: recipeDescription
 		};
 		console.log(`This is the object ${newRecipeData.name}`);
-		let success = await actions.createContact(newRecipeData);
+		let success = await actions.createRecipe(newRecipeData);
 		if (success) {
 			history.push("/");
 		} else {
 			window.alert("Something went wrong, check your input and try again.");
 		}
 	}
-	const [profile_id, setProfile_id] = useState("");
-	const [diet, setDiet] = useState("");
-	const [images, setImages] = useState("");
-	const [recipe_ingredients, setRecipe_ingredients] = useState("");
-	const [video_recipe_link, setRecipe_video_link] = useState("");
-	const [recipe_description, setRecipe_description] = useState("");
-	var history = useHistory();
+
 	return (
 		<div className="container">
 			<div>
 				<h1 className="text-center mt-5">Add your Recipe</h1>
 				<form onSubmit={handleSubmit}>
 					<div className="form-group">
-						<label>User</label>
+						<label>Diet</label>
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Restaurant Name"
-							value={profile_id}
-							onChange={event => setProfile_id(event.target.value)}
-						/>
-					</div>
-					<div className="form-group">
-						<label>Diet</label>
-						<input
-							type="email"
-							className="form-control"
-							placeholder="Enter email"
+							placeholder="Vegan - Gluten Free - Both"
 							value={diet}
 							onChange={event => setDiet(event.target.value)}
 						/>
@@ -61,9 +48,9 @@ export const CreateRecipe = () => {
 					<div className="form-group">
 						<label>Images</label>
 						<input
-							type="phone"
+							type="text"
 							className="form-control"
-							placeholder="Enter phone"
+							placeholder="Browse.."
 							value={images}
 							onChange={event => setImages(event.target.value)}
 						/>
@@ -73,9 +60,9 @@ export const CreateRecipe = () => {
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Enter address"
-							value={recipe_ingredients}
-							onChange={event => setRecipe_ingredients(event.target.value)}
+							placeholder="Enter ingredients"
+							value={recipeIngredients}
+							onChange={event => setRecipeIngredients(event.target.value)}
 						/>
 					</div>
 					<div className="form-group">
@@ -83,19 +70,19 @@ export const CreateRecipe = () => {
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Full Name"
-							value={video_recipe_link}
-							onChange={event => setVideo_recipe_link(event.target.value)}
+							placeholder="Browse..."
+							value={videoRecipeLink}
+							onChange={event => setVideoRecipeLink(event.target.value)}
 						/>
 					</div>
 					<div className="form-group">
 						<label>Description</label>
 						<input
-							type="email"
+							type="text"
 							className="form-control"
-							placeholder="www.example.com"
-							value={recipe_description}
-							onChange={event => setRecipe_description(event.target.value)}
+							placeholder="description of the recipe"
+							value={recipeDescription}
+							onChange={event => setRecipeDescription(event.target.value)}
 						/>
 					</div>
 					<button type="submit" className="btn btn-primary form-control">

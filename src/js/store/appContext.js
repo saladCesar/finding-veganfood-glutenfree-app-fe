@@ -32,6 +32,7 @@ const injectContext = PassedComponent => {
 			 *
 			 **/
 			state.actions.loadProfile();
+			state.actions.loadRecipes();
 			// }, []);
 			// useEffect(() => {
 			// 	state.actions.getEducation();
