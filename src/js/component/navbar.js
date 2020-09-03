@@ -91,6 +91,11 @@ export const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
+						<Link to="/generalrecipes">
+							<button className="btn">General Recipes</button>
+						</Link>
+					</li>
+					<li className="nav-item">
 						<Link to="/addrestaurant">
 							<button className="btn">Upload your restaurant!</button>
 						</Link>

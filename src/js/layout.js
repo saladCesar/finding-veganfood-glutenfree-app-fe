@@ -19,6 +19,7 @@ import { Createprofile } from "./views/createprofile";
 import { Login } from "./views/login";
 import { CreateRecipe } from "./views/createrecipe";
 import { RestaurantPolicy } from "./views/restaurantpolicy";
+import { GeneralRecipes } from "./views/generalrecipes";
 
 //create your first component
 export const Layout = () => {
@@ -53,6 +54,9 @@ export const Layout = () => {
 					</Route>
 					<Route exact path="/login">
 						<Login />
+					</Route>
+					<Route exact path="/generalrecipes">
+						<GeneralRecipes />
 					</Route>
 					<Route exact path="/addrestaurant">
 						<AddRestaurant />
