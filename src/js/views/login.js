@@ -46,12 +46,14 @@ export const Login = props => {
 					<input type="checkbox" value="remember-me" /> Remember me
 				</label>
 			</div>
-			<button
-				onClick={() => actions.login(email, password)}
-				className="btn btn-lg btn-primary btn-block"
-				type="submit">
-				Sign in
-			</button>
+			<Link to="/">
+				<button
+					onClick={() => actions.login(email, password)}
+					className="btn btn-lg btn-primary btn-block"
+					type="submit">
+					Sign in
+				</button>
+			</Link>
 			<p className="mt-5 mb-3 text-muted">© 2017-2020</p>
 		</div>
 	);

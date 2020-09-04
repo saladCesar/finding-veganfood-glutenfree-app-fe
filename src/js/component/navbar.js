@@ -114,28 +114,33 @@ export const Navbar = () => {
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
-							Username
+							Hello, Sign in
 						</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a className="dropdown-item" href="#">
-								<Link to="/login">
-									<button className="btn"> Log in</button>
-								</Link>
-							</a>
-							<a className="dropdown-item" href="#">
 								<Link to="/createrecipe">
-									<button className="btn"> Upload recipe</button>
+									<button className="dropdown-item">Upload recipe</button>
 								</Link>
 							</a>
-							<a className="dropdown-item" href="#">
-								My Reviews
-							</a>
-							<a className="dropdown-item" href="#">
-								My Favorites
-							</a>
+							<Link to="/myreviews">
+								<a className="dropdown-item" href="#">
+									My Reviews
+								</a>
+							</Link>
+							<Link to="/myfavorites">
+								<a className="dropdown-item" href="#">
+									My Favorites
+								</a>
+							</Link>
+							<Link to="/communityrecipes">
+								<button className="dropdown-item" href="#">
+									My Recipes
+								</button>
+							</Link>
 							<a className="dropdown-item" href="#">
 								Rewards
 							</a>
+
 							<div className="dropdown-divider" />
 							<Link to="/createprofile">
 								<button className="dropdown-item" href="#">
@@ -148,7 +153,9 @@ export const Navbar = () => {
 										Logout
 									</button>
 								) : (
-									<button className="btn btn-primary">Login</button>
+									<Link to="/login">
+										<button className="btn btn-success">Login</button>
+									</Link>
 								)}
 							</div>
 						</div>
