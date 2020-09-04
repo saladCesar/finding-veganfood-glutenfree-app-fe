@@ -3,20 +3,21 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { Context } from "../store/appContext";
+import logoFoodCast from "../../img/logo.jpg";
 
 export const Titleandsearch = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<a className="navbar-brand col-xs-6 col-md-4" href="#">
 				<img
-					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._fsat6uTQCDr7ABAAdIvcwAAAA%26pid%3DApi&f=1"
-					width="30"
-					height="30"
+					src={logoFoodCast}
+					width="40"
+					height="40"
 					className="d-inline-block align-top"
 					alt=""
 					loading="lazy"
 				/>
-				Happy fun foods?
+				Welcome to FoodCast!
 			</a>
 			<button
 				className="navbar-toggler"
@@ -79,11 +80,6 @@ export const Navbar = () => {
 								<button className="btn">Home</button>
 							</Link>
 						</a>
-					</li>
-					<li className="nav-item">
-						<Link to="/communityrecipes">
-							<button className="btn">Community Recipes</button>
-						</Link>
 					</li>
 					<li className="nav-item">
 						<Link to="/education">
