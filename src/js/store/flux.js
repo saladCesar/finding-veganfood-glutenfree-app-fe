@@ -3,7 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			token: null,
-			recipe: []
+			recipe: [],
+			restaurants: [],
+			searchResults: []
 			// demo: [
 			// 	{
 			// 		title: "FIRST",
@@ -19,6 +21,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// ]
 		},
 		actions: {
+			search: restaurantToSearch => {
+				const store = getStore();
+				let searchedRestaurant = store.restaurants.filter(item => item.name.includes(restaurantToSearch));
+				setStore({ searchResults: searchedRestaurant });
+			},
+			loadRestaurants: () => {
+				const store = getStore();
+				fetch(`${backendUrl}restaurant`, {
+					headers: {
+						"Content-type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => setStore({ restaurants: data }))
+					.catch(error => console.log(error));
+			},
 			loadRecipes: () => {
 				const store = getStore();
 				fetch(`${backendUrl}recipe`, {

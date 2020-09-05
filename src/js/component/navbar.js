@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
@@ -6,6 +6,8 @@ import { Context } from "../store/appContext";
 import logoFoodCast from "../../img/logo.jpg";
 
 export const Titleandsearch = () => {
+	const { store, actions } = useContext(Context);
+	const [search, setSearch] = useState("");
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<a className="navbar-brand col-xs-6 col-md-4" href="#">
@@ -37,9 +39,12 @@ export const Titleandsearch = () => {
 						type="search"
 						placeholder="Supermarket, Restaurants..."
 						aria-label="Search"
+						onChange={e => setSearch(e.target.value)}
 					/>
 					<Link to="/restaurants">
-						<button className="btn btn-outline-dark my-2 my-0">Search</button>
+						<button className="btn btn-outline-dark my-2 my-0" onClick={() => actions.search(search)}>
+							Search
+						</button>
 					</Link>
 				</form>
 			</div>

@@ -33,6 +33,7 @@ const injectContext = PassedComponent => {
 			 **/
 			state.actions.loadProfile();
 			state.actions.loadRecipes();
+			state.actions.loadRestaurants();
 			// }, []);
 			// useEffect(() => {
 			// 	state.actions.getEducation();
