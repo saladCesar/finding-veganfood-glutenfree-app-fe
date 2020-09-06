@@ -6,6 +6,9 @@ import restowater from "../../img/restaurants/restowater.jpg";
 
 export const Restaurants = props => {
 	const { store, actions } = useContext(Context);
+	useEffect(() => {
+		actions.loadRecipes();
+	}, []);
 	return (
 		<div className="container">
 			<ul className="list-group d-flex flex-row overflow-auto">
@@ -15,13 +18,12 @@ export const Restaurants = props => {
 							<div
 								className="card"
 								style={{
-									height: "400px",
 									width: "300px"
 								}}>
 								<div
 									className="image1"
 									style={{
-										backgroundImage: `url(${restowater})`,
+										backgroundImage: `url(${item.images})`,
 										backroundPosition: "center",
 										backgroundSize: "cover",
 										width: "100%",

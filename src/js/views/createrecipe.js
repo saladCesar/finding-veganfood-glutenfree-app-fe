@@ -85,7 +85,10 @@ export const CreateRecipe = () => {
 							onChange={event => setRecipeDescription(event.target.value)}
 						/>
 					</div>
-					<button type="submit" className="btn btn-primary form-control">
+					<button
+						onClick={() => actions.createRecipe(newRecipeData)}
+						className="btn btn-primary form-control"
+						type="submit">
 						save
 					</button>
 					<Link className="mt-3 w-100 text-center" to="/">

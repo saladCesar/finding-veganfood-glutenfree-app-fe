@@ -38,7 +38,7 @@ export const CommunityRecipes = props => {
 					/> */}
 							<div className="card-body">
 								<h5 className="card-title">Creamy Vegan Pasta - Uploaded by User765</h5>
-								<p className="card-text">{item.recipe_description}</p>
+								<p className="card-text">Description: {item.recipe_description}</p>
 								<p className="card-text">Click here to check the full steps</p>
 							</div>
 						</div>
