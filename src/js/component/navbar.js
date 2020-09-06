@@ -14,7 +14,7 @@ export const Titleandsearch = () => {
 				<img
 					src={logoFoodCast}
 					width="40"
-					height="40"
+					height="60"
 					className="d-inline-block align-top"
 					alt=""
 					loading="lazy"
