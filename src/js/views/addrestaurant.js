@@ -115,11 +115,10 @@ export const AddRestaurant = () => {
 							onChange={event => setDiet(event.target.value)}
 						/>
 					</div>
-					<button type="submit" className="btn btn-primary form-control">
-						save
-					</button>
 					<Link className="mt-3 w-100 text-center" to="/">
-						or get back to contacts
+						<button type="submit" className="btn btn-primary form-control">
+							save
+						</button>
 					</Link>
 				</form>
 			</div>
