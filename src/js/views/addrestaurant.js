@@ -1,30 +1,10 @@
 import React, { useState, useContext } from "react";
+import PropTypes from "prop-types";
 import { Link, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const AddRestaurant = () => {
 	const { store, actions } = useContext(Context);
-	async function handleSubmit(event) {
-		event.preventDefault();
-		event.stopPropagation();
-		console.log(`submit here ${name} ${diet} ${address} ${email} ${phone} ${operational_hours} ${website}`);
-		var newRestaurantData = {
-			name: name,
-			diet: diet,
-			address: address,
-			email: email,
-			phone: phone,
-			operational_hours: operational_hours,
-			website: website
-		};
-		console.log(`This is the object ${newRestaurantData.name}`);
-		let success = await actions.createContact(newRestaurantData);
-		if (success) {
-			history.push("/");
-		} else {
-			window.alert("Something went wrong, check your input and try again.");
-		}
-	}
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
@@ -32,7 +12,33 @@ export const AddRestaurant = () => {
 	const [operational_hours, setOperational_hours] = useState("");
 	const [website, setWebsite] = useState("");
 	const [diet, setDiet] = useState("");
+	const [images, setImages] = useState("");
 	var history = useHistory();
+	async function handleSubmit(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		console.log(
+			`submit here ${name} ${diet} ${address} ${email} ${phone} ${operational_hours} ${website} ${images}`
+		);
+		var newRestaurantData = {
+			name: name,
+			diet: diet,
+			address: address,
+			email: email,
+			phone: phone,
+			operational_hours: operational_hours,
+			website: website,
+			images: images
+		};
+		console.log(`This is the object ${newRestaurantData.name}`);
+		let success = await actions.addRestaurant(newRestaurantData);
+		if (success) {
+			history.push("/");
+		} else {
+			window.alert("Something went wrong, check your input and try again.");
+		}
+	}
+
 	return (
 		<div className="container">
 			<div>
@@ -86,6 +92,16 @@ export const AddRestaurant = () => {
 						/>
 					</div>
 					<div className="form-group">
+						<label>Upload a photo of the Restaurant</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Restaurant Name"
+							value={images}
+							onChange={event => setImages(event.target.value)}
+						/>
+					</div>
+					<div className="form-group">
 						<label>Operarional hours</label>
 						<input
 							type="text"
@@ -115,6 +131,12 @@ export const AddRestaurant = () => {
 							onChange={event => setDiet(event.target.value)}
 						/>
 					</div>
+					<button
+						// onClick={() => actions.addRestaurant(newRestaurantData)}
+						type="submit"
+						className="btn btn-primary form-control">
+						save
+					</button>
 					<Link className="mt-3 w-100 text-center" to="/">
 						<button type="submit" className="btn btn-primary form-control">
 							save
