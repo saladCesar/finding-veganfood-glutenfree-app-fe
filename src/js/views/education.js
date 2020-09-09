@@ -6,6 +6,8 @@ import { Context } from "../store/appContext";
 export const Education = props => {
 	const { store, actions } = useContext(Context);
 	return (
+		//Code education file.js to look like an article//
+
 		<div className="container">
 			<h1>Interested in our way of eating?</h1>
 			<div className="row">
