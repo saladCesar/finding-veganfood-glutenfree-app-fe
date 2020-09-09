@@ -68,7 +68,7 @@ export const CreateRecipe = () => {
 							onChange={event => setRecipeIngredients(event.target.value)}
 						/>
 					</div>
-					<div className="form-group">
+					{/* <div className="form-group">
 						<label>Video</label>
 						<input
 							type="text"
@@ -77,7 +77,7 @@ export const CreateRecipe = () => {
 							value={videoRecipeLink}
 							onChange={event => setVideoRecipeLink(event.target.value)}
 						/>
-					</div>
+					</div> */}
 					<div className="form-group">
 						<label>Description</label>
 						<input
