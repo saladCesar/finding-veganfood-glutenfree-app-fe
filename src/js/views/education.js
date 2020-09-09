@@ -16,7 +16,7 @@ export const Education = props => {
 						<div className="col">
 							<li className="list-group-item">Health</li>
 							<p>Healthy habits</p>
-							<script></script>
+							<script />
 						</div>
 						<div className="col">
 							<li className="list-group-item">Nutrition</li>
