@@ -8,6 +8,5 @@ import { Signup } from "../component/signup";
 export const Home = () => (
 	<>
 		<Jumbotron />
-		<Signup />
 	</>
 );
