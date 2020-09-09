@@ -96,7 +96,7 @@ export const AddRestaurant = () => {
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Restaurant Name"
+							placeholder="Upload restaurant photo"
 							value={images}
 							onChange={event => setImages(event.target.value)}
 						/>
@@ -106,7 +106,7 @@ export const AddRestaurant = () => {
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Full Name"
+							placeholder="Operational hours"
 							value={operational_hours}
 							onChange={event => setOperational_hours(event.target.value)}
 						/>
@@ -131,12 +131,12 @@ export const AddRestaurant = () => {
 							onChange={event => setDiet(event.target.value)}
 						/>
 					</div>
-					<button
+					{/* <button
 						// onClick={() => actions.addRestaurant(newRestaurantData)}
 						type="submit"
 						className="btn btn-primary form-control">
 						save
-					</button>
+					</button> */}
 					<Link className="mt-3 w-100 text-center" to="/">
 						<button type="submit" className="btn btn-primary form-control">
 							save

@@ -14,20 +14,34 @@ export const Education = props => {
 				<div className="style education col">
 					<ul className="list-group">
 						<div className="col">
-							<li className="list-group-item">Health</li>
+							<h4>
+								{" "}
+								<li className="list-group-item">Health</li>
+							</h4>
+
 							<p>Healthy habits</p>
-							<script></script>
 						</div>
 						<div className="col">
-							<li className="list-group-item">Nutrition</li>
+							<h4>
+								{" "}
+								<li className="list-group-item">Nutrition</li>
+							</h4>
+
 							<p>Lets see what the doctors have say!</p>
 						</div>
 						<div className="col">
-							<li className="list-group-item">Ethics</li>
+							<h4>
+								{" "}
+								<li className="list-group-item">Ethics</li>
+							</h4>
+
 							<p>We are destroying the planet in the name of food</p>
 						</div>
 						<div className="col">
-							<li className="list-group-item">Documentaries</li>
+							<h4>
+								<li className="list-group-item">Documentaries</li>
+							</h4>
+
 							<p>Earthlings, Forks over Knives, Cowspiracy</p>
 						</div>
 					</ul>
