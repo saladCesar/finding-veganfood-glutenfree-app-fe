@@ -19,7 +19,7 @@ export const Titleandsearch = () => {
 					alt=""
 					loading="lazy"
 				/>
-				Welcome to FoodCast!
+				FoodCast
 				<img
 					src={logoFoodCast}
 					width="50"
