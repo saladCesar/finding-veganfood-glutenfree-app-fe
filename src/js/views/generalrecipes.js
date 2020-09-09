@@ -25,13 +25,13 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
+								<h5 className="card-title">Gluten free Mac and Cheese</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Gluten free delicious Pizza</small>
 								</p>
 							</div>
 						</div>
@@ -49,7 +49,7 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
+								<h5 className="card-title">Gluten Free Delicious Pizza</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
@@ -73,7 +73,7 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
+								<h5 className="card-title">Salmon</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
@@ -99,7 +99,7 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
+								<h5 className="card-title">Vegan backed Zuchini</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
@@ -123,7 +123,7 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
+								<h5 className="card-title">Vegan Macaroni Salad</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
@@ -147,7 +147,7 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
+								<h5 className="card-title">Vegan stuffed peppers</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
