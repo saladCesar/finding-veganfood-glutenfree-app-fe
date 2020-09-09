@@ -1,8 +1,10 @@
+// const backendUrl = "https://3000-c340f1e8-1798-4b26-832d-8713dea868db.ws-us02.gitpod.io/";
 const backendUrl = "https://3000-c340f1e8-1798-4b26-832d-8713dea868db.ws-us02.gitpod.io/";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			token: null,
+			currentUser: null,
 			recipe: [],
 			restaurants: [],
 			searchResults: []
@@ -23,7 +25,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			search: restaurantToSearch => {
 				const store = getStore();
-				let searchedRestaurant = store.restaurants.filter(item => item.name.includes(restaurantToSearch));
+				let searchedRestaurant = store.restaurants.filter(item =>
+					item.name.toLowerCase().includes(restaurantToSearch.toLowerCase())
+				);
 				setStore({ searchResults: searchedRestaurant });
 			},
 			loadRestaurants: () => {
@@ -46,8 +50,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				fetch(`${backendUrl}recipe`, {
 					headers: {
-						"Content-type": "application/json",
-						Authorization: `Bearer ${store.token}`
+						"Content-type": "application/json"
+						// Authorization: `Bearer ${store.token}`
 					}
 				})
 					.then(response => {
@@ -59,7 +63,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => setStore({ recipe: data }))
 					.catch(error => console.log(error));
 			},
-			createRecipe: recipeDictionary => {
+			createRecipe: (a, b, c, d, e) => {
 				const store = getStore();
 				fetch(`${backendUrl}recipe`, {
 					method: "POST",
@@ -68,17 +72,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 						Authorization: `Bearer ${store.token}`
 					},
 
-					body: JSON.stringify(recipeDictionary)
-				}).then(response => {
-					if (response.ok) {
-						return true;
-					} else {
-						return false;
-					}
-				});
+					body: JSON.stringify({
+						images: "https://cdn.loveandlemons.com/wp-content/uploads/2017/10/vegan-pasta.jpg", // when you want replace this string with b without ""
+						diet: a,
+						video_recipe_link: d,
+						recipe_ingredients: c,
+						recipe_description: e,
+						profile_id: store.currentUser.id
+					})
+				})
+					.then(response => {
+						if (response.ok) {
+							return true;
+						} else {
+							return false;
+						}
+					})
+					.then(() => getActions().loadRecipes());
 			},
 			addRestaurant: (param1, param2, param3, param4, param5, param6, param7, param8) => {
-				fetch(`${backendUrl}restaurants`, {
+				fetch(`${backendUrl}restaurant`, {
 					method: "POST",
 					headers: {
 						"Content-type": "application/json"
@@ -121,7 +134,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						if (typeof token.msg != "undefined") {
 							//Notify.error(token.msg);
 						} else {
-							setStore({ token: token.jwt });
+							setStore({ token: token.jwt, currentUser: token.user });
 						}
 					});
 			},

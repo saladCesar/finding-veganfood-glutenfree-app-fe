@@ -9,32 +9,35 @@ export const CreateRecipe = () => {
 	const [recipeIngredients, setRecipeIngredients] = useState("");
 	const [videoRecipeLink, setVideoRecipeLink] = useState("");
 	const [recipeDescription, setRecipeDescription] = useState("");
+
 	var history = useHistory();
-	async function handleSubmit(event) {
-		event.preventDefault();
-		event.stopPropagation();
-		console.log(`submit here ${diet} ${images} ${recipeIngredients} ${videoRecipeLink} ${recipeDescription}`);
-		var newRecipeData = {
-			diet: diet,
-			images: images,
-			recipe_ingredients: recipeIngredients,
-			video_recipe_link: videoRecipeLink,
-			recipe_description: recipeDescription
-		};
-		console.log(`This is the object ${newRecipeData.name}`);
-		let success = await actions.createRecipe(newRecipeData);
-		if (success) {
-			history.push("/");
-		} else {
-			window.alert("Something went wrong, check your input and try again.");
-		}
-	}
+	// async function handleSubmit(event) {
+	// 	event.preventDefault();
+	// 	event.stopPropagation();
+	// 	console.log(`submit here ${diet} ${images} ${recipeIngredients} ${videoRecipeLink} ${recipeDescription}`);
+	// 	var newRecipeData = {
+	// 		diet: diet,
+	// 		images: images,
+	// 		recipe_ingredients: recipeIngredients,
+	// 		video_recipe_link: videoRecipeLink,
+	// 		recipe_description: recipeDescription,
+	// 		profile_id: 1
+	// 	};
+	// 	console.log(`This is the object ${newRecipeData}`);
+	// 	let success = await actions.createRecipe(newRecipeData);
+	// 	if (success) {
+	// 		history.push("/");
+	// 	} else {
+	// 		window.alert("Something went wrong, check your input and try again.");
+	// 	}
+	// }
 
 	return (
 		<div className="container">
 			<div>
 				<h1 className="text-center mt-5">Add your Recipe</h1>
-				<form onSubmit={handleSubmit}>
+				{/* <form>onSubmit={handleSubmit} */}
+				<form>
 					<div className="form-group">
 						<label>Diet</label>
 						<input
@@ -85,12 +88,23 @@ export const CreateRecipe = () => {
 							onChange={event => setRecipeDescription(event.target.value)}
 						/>
 					</div>
-					<button
-						onClick={() => actions.createRecipe(newRecipeData)}
-						className="btn btn-primary form-control"
-						type="submit">
-						save
-					</button>
+
+					<Link className="mt-3 w-100 text-center" to="/communityrecipes">
+						<button
+							onClick={() =>
+								actions.createRecipe(
+									diet,
+									images,
+									recipeIngredients,
+									videoRecipeLink,
+									recipeDescription
+								)
+							}
+							className="btn btn-primary form-control"
+							type="button">
+							save
+						</button>
+					</Link>
 					<Link className="mt-3 w-100 text-center" to="/">
 						or get back to contacts
 					</Link>
