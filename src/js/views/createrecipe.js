@@ -39,7 +39,7 @@ export const CreateRecipe = () => {
 				{/* <form>onSubmit={handleSubmit} */}
 				<form>
 					<div className="form-group">
-						<label>Diet</label>
+						<label>Name of the dish</label>
 						<input
 							type="text"
 							className="form-control"
@@ -49,7 +49,7 @@ export const CreateRecipe = () => {
 						/>
 					</div>
 					<div className="form-group">
-						<label>Images</label>
+						<label>Upload a photo</label>
 						<input
 							type="text"
 							className="form-control"

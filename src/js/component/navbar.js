@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { Context } from "../store/appContext";
-import logoFoodCast from "../../img/logo.jpg";
+import logoFoodCast from "../../img/logo/logo-noback.jpg";
 
 export const Titleandsearch = () => {
 	const { store, actions } = useContext(Context);
@@ -13,13 +13,21 @@ export const Titleandsearch = () => {
 			<a className="navbar-brand col-xs-6 col-md-4" href="#">
 				<img
 					src={logoFoodCast}
-					width="40"
-					height="60"
-					className="d-inline-block align-top"
+					width="50"
+					height="80"
+					className="d-inline-block align-center"
 					alt=""
 					loading="lazy"
 				/>
 				Welcome to FoodCast!
+				<img
+					src={logoFoodCast}
+					width="50"
+					height="80"
+					className="d-inline-block align-center"
+					alt=""
+					loading="lazy"
+				/>
 			</a>
 			<button
 				className="navbar-toggler"
@@ -56,14 +64,6 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-success">
 			<a className="navbar-brand" href="#">
-				<img
-					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._fsat6uTQCDr7ABAAdIvcwAAAA%26pid%3DApi&f=1"
-					width="30"
-					height="30"
-					className="d-inline-block align-top"
-					alt=""
-					loading="lazy"
-				/>
 				Eat healthy, feel great!
 			</a>
 			<button

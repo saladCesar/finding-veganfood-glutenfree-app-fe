@@ -11,15 +11,11 @@ export const Restaurants = props => {
 	}, []);
 	return (
 		<div className="container">
-			<ul className="list-group d-flex flex-row overflow-auto">
+			<ul className="row">
 				{store.searchResults.map((item, index) => {
 					return (
-						<div key={index} className="custom-card card">
-							<div
-								className="card"
-								style={{
-									width: "300px"
-								}}>
+						<div key={index} className="col-3 my-3">
+							<div className="card">
 								<div
 									className="image1"
 									style={{
@@ -32,7 +28,7 @@ export const Restaurants = props => {
 								/>
 							</div>
 							<div className="card-body">
-								<h5 className="card-title">Name: {item.name}</h5>
+								<h5 className="card-title">{item.name}</h5>
 								<p className="card-text">Address: {item.address}</p>
 								<p className="card-text">Diet: {item.diet}</p>
 								<p className="card-text">Phone number: {item.phone_number}</p>
