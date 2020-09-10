@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { Context } from "../store/appContext";
 import logoFoodCast from "../../img/logo/logo-noback.jpg";
+import foodcast from "../../img/logo/onlyfoodcast.jpg";
 
 export const Titleandsearch = () => {
 	const { store, actions } = useContext(Context);
@@ -19,7 +20,14 @@ export const Titleandsearch = () => {
 					alt=""
 					loading="lazy"
 				/>
-				FoodCast
+				<img
+					src={foodcast}
+					width="160"
+					height="55"
+					className="d-inline-block align-center"
+					alt=""
+					loading="lazy"
+				/>
 				<img
 					src={logoFoodCast}
 					width="50"

@@ -163,10 +163,8 @@ export const GeneralRecipes = props => {
 					</div>
 				</div>
 			</div>
-			<Link to="/">
-				<button className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</button>
+			<Link className="btn btn-success btn-lg m-auto w-25" to="/">
+				Back
 			</Link>
 		</>
 	);

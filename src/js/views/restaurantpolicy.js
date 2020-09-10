@@ -101,11 +101,11 @@ export const RestaurantPolicy = props => {
 							</p>
 						</div>
 						<div
-							className="picture-body col-6"
+							className="picture-body col-5"
 							style={{
 								backgroundImage: `url(${glutenfree})`,
 								backroundPosition: "center",
-								backgroundSize: "cover",
+								backgroundRepeat: "no-repeat",
 								width: "50%",
 								height: "550px"
 							}}
@@ -113,10 +113,8 @@ export const RestaurantPolicy = props => {
 					</div>
 				</div>
 			</div>
-			<Link to="/addrestaurant">
-				<button className="btn btn-success btn-lg" href="#" role="button">
-					Back
-				</button>
+			<Link className="btn btn-success btn-lg w-25 m-auto" to="/addrestaurant">
+				Back
 			</Link>
 		</>
 	);
