@@ -9,9 +9,9 @@ export const RestaurantPolicy = props => {
 		<>
 			<div className="text">Here we will print the RestaurantPolicy</div>
 
-			<Link to="/">
+			<Link to="/addrestaurant">
 				<button className="btn btn-success btn-lg" href="#" role="button">
-					Back home
+					Back
 				</button>
 			</Link>
 		</>

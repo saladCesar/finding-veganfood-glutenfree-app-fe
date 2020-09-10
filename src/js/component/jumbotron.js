@@ -66,10 +66,6 @@ export const Jumbotron = () => {
 				</div>
 
 				<hr classNameName="my-4" />
-				<p>{/*  */}</p>
-				<a classNameName="btn btn-primary btn-lg" href="#" role="button">
-					{/* Learn more */}
-				</a>
 			</div>
 		</>
 	);
