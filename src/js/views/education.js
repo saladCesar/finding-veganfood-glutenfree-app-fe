@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import education from "../../img/education/image-education.jpg";
+import piramid from "../../img/education/piramid.jpg";
 
 export const Education = props => {
 	const { store, actions } = useContext(Context);
@@ -9,12 +11,17 @@ export const Education = props => {
 		//Code education file.js to look like an article//
 
 		<div className="container">
-			<h1>Interested in our way of eating?</h1>
-			<img
-				src="https://www.glutenfreeliving.com/gluten-free/beyond-gluten-free/eating-vegan-on-the-gluten-free-diet/"
-				className="mx-auto rounded-md mb-2"
+			<div
+				className="image1"
+				style={{
+					backgroundImage: `url(${education})`,
+					backroundPosition: "center",
+					backgroundSize: "cover",
+					width: "100%",
+					height: "150px"
+				}}
 			/>
-
+			<h1>Interested in our way of eating?</h1>
 			<div className="row">
 				<div className="style education col">
 					<ul className="list-group">
@@ -24,33 +31,103 @@ export const Education = props => {
 								<li className="list-group-item">Health and Nutrition</li>
 							</h4>
 							<h5>Vegan</h5>
-							<p className="my-2">
-								Numerous studies have shown that plant-based nutrition has significant health benefits
-								that include: Healthier weight Lower risk of cancer and diabetes Longer life Better
-								cardiovascular health/reversal or prevention of heart disease Lower cholesterol Lower
-								blood sugar Lower blood pressure Fewer medications Improved symptoms of rheumatoid
-								arthritis For example, a 2009 article published by the American Journal of Clinical
-								Nutrition reported that vegetarians typically enjoy a lower risk of cardiovascular
-								disease, obesity, Type 2 diabetes, and some cancers than omnivores. Other findings
-								published in the American Journal of Clinical Nutrition article included: Vegan diets
-								increase the intake of protective nutrients and phytochemicals and minimize the intake
-								of dietary factors related to a number of chronic diseases.
-							</p>
-							<p className="my-2">
-								Vegans (compared to omnivores) consume greater quantities of fruit and vegetables, which
-								are associated with lower blood cholesterol, lower incidences of stroke, and lower risk
-								of mortality from stroke and heart disease. Vegans consume more whole grains, soy, and
-								nuts, all of which provide significant cardiovascular protection. Vegans consumer more
-								legumes, fruits, vegetables, tomatoes, allium vegetables, fiber, and vitamin C than
-								omnivores, all of which are protective against cancer of the lung, mouth, esophagus,
-								stomach, and prostate. Because red meat and processed meat consumption are associated
-								with an increased risk of esophageal, liver, lung, and colorectal cancers (ranging from
-								20 to 60 percent), this risk to vegans is greatly reduced. Vegans tend to have a high
-								intake of tofu and other soy products, which are suggested to have a beneficial effect
-								on bone health in postmenopausal women.
-							</p>
+							<div className="vegan-body">
+								<div className="row">
+									<div className="vegan-text col-6">
+										<p className="my-2">
+											Numerous studies have shown that plant-based nutrition has significant
+											health benefits that include: Healthier weight Lower risk of cancer and
+											diabetes Longer life Better cardiovascular health/reversal or prevention of
+											heart disease Lower cholesterol Lower blood sugar Lower blood pressure Fewer
+											medications Improved symptoms of rheumatoid arthritis For example, a 2009
+											article published by the American Journal of Clinical Nutrition reported
+											that vegetarians typically enjoy a lower risk of cardiovascular disease,
+											obesity, Type 2 diabetes, and some cancers than omnivores. Other findings
+											published in the American Journal of Clinical Nutrition article included:
+											Vegan diets increase the intake of protective nutrients and phytochemicals
+											and minimize the intake of dietary factors related to a number of chronic
+											diseases.
+										</p>
+										<p className="my-2">
+											Vegans (compared to omnivores) consume greater quantities of fruit and
+											vegetables, which are associated with lower blood cholesterol, lower
+											incidences of stroke, and lower risk of mortality from stroke and heart
+											disease. Vegans consume more whole grains, soy, and nuts, all of which
+											provide significant cardiovascular protection. Vegans consumer more legumes,
+											fruits, vegetables, tomatoes, allium vegetables, fiber, and vitamin C than
+											omnivores, all of which are protective against cancer of the lung, mouth,
+											esophagus, stomach, and prostate. Because red meat and processed meat
+											consumption are associated with an increased risk of esophageal, liver,
+											lung, and colorectal cancers (ranging from 20 to 60 percent), this risk to
+											vegans is greatly reduced. Vegans tend to have a high intake of tofu and
+											other soy products, which are suggested to have a beneficial effect on bone
+											health in postmenopausal women.
+										</p>
+									</div>
+									<div
+										className="picture-body col-6"
+										style={{
+											backgroundImage: `url(${piramid})`,
+											backroundPosition: "center",
+											backgroundSize: "cover",
+											width: "50%"
+										}}
+									/>
+								</div>
+							</div>
 						</div>
 						<div className="col">
+							<h4>
+								{" "}
+								<li className="list-group-item">Health and Nutrition</li>
+							</h4>
+							<h5>Vegan</h5>
+							<div className="vegan-body">
+								<div className="row">
+									<div className="vegan-text col-6">
+										<p className="my-2">
+											Numerous studies have shown that plant-based nutrition has significant
+											health benefits that include: Healthier weight Lower risk of cancer and
+											diabetes Longer life Better cardiovascular health/reversal or prevention of
+											heart disease Lower cholesterol Lower blood sugar Lower blood pressure Fewer
+											medications Improved symptoms of rheumatoid arthritis For example, a 2009
+											article published by the American Journal of Clinical Nutrition reported
+											that vegetarians typically enjoy a lower risk of cardiovascular disease,
+											obesity, Type 2 diabetes, and some cancers than omnivores. Other findings
+											published in the American Journal of Clinical Nutrition article included:
+											Vegan diets increase the intake of protective nutrients and phytochemicals
+											and minimize the intake of dietary factors related to a number of chronic
+											diseases.
+										</p>
+										<p className="my-2">
+											Vegans (compared to omnivores) consume greater quantities of fruit and
+											vegetables, which are associated with lower blood cholesterol, lower
+											incidences of stroke, and lower risk of mortality from stroke and heart
+											disease. Vegans consume more whole grains, soy, and nuts, all of which
+											provide significant cardiovascular protection. Vegans consumer more legumes,
+											fruits, vegetables, tomatoes, allium vegetables, fiber, and vitamin C than
+											omnivores, all of which are protective against cancer of the lung, mouth,
+											esophagus, stomach, and prostate. Because red meat and processed meat
+											consumption are associated with an increased risk of esophageal, liver,
+											lung, and colorectal cancers (ranging from 20 to 60 percent), this risk to
+											vegans is greatly reduced. Vegans tend to have a high intake of tofu and
+											other soy products, which are suggested to have a beneficial effect on bone
+											health in postmenopausal women.
+										</p>
+									</div>
+									<div
+										className="picture-body col-6"
+										style={{
+											backgroundImage: `url(${piramid})`,
+											backroundPosition: "center",
+											backgroundSize: "cover",
+											width: "50%"
+										}}
+									/>
+								</div>
+							</div>
+						</div>
+						{/* <div className="col">
 							<h5>Gluten-Free</h5>
 							<p className="my-2">
 								CD is an autoimmune, genetic, lifelong condition that can present at any age. It causes
@@ -73,7 +150,7 @@ export const Education = props => {
 								common, including factors such as anxiety, depression, anemia, fatigue, osteopenia,
 								rashes, dental enamel defects, and aphthous ulcers
 							</p>
-						</div>
+						</div> */}
 						<div className="col">
 							<h4>
 								{" "}
