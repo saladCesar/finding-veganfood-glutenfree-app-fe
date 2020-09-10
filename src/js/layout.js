@@ -22,6 +22,7 @@ import { RestaurantPolicy } from "./views/restaurantpolicy";
 import { GeneralRecipes } from "./views/generalrecipes";
 import { MyFavorites } from "./views/myfavorites";
 import { MyReviews } from "./views/myreviews";
+import { Rewards } from "./views/rewards";
 
 //create your first component
 export const Layout = () => {
@@ -80,6 +81,9 @@ export const Layout = () => {
 					</Route>
 					<Route exact path="/myfavorites">
 						<MyFavorites />
+					</Route>
+					<Route exact path="/rewards">
+						<Rewards />
 					</Route>
 					<Route exact path="/myaccount">
 						<MyAccount />
