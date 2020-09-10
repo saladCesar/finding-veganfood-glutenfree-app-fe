@@ -79,7 +79,7 @@ export const Education = props => {
 						<div className="col">
 							<h4>
 								{" "}
-								<li className="list-group-item">Health and Nutrition</li>
+								<li className="list-group-item"></li>
 							</h4>
 							<h5>Vegan</h5>
 							<div className="vegan-body">
