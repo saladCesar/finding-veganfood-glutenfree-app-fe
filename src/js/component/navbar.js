@@ -62,8 +62,14 @@ export const Titleandsearch = () => {
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-success">
-			<a className="navbar-brand" href="#">
+		<nav className="navbar navbar-expand-lg navbar-dark bg-success">
+			<a
+				className="navbar-brand"
+				href="#"
+				// style={{
+				// 	color: "white"
+				// }}
+			>
 				Eat healthy, feel great!
 			</a>
 			<button
@@ -78,35 +84,33 @@ export const Navbar = () => {
 			</button>
 
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul className="navbar-nav mr-auto">
+				<ul className="navbar-nav w-100">
 					<li className="nav-item active">
-						<a className="nav-item">
-							<Link to="/">
-								<button className="btn">Home</button>
-							</Link>
-						</a>
+						<Link className="nav-item btn btn-success" to="/">
+							Home
+						</Link>
 					</li>
-					<li className="nav-item">
-						<Link to="/education">
-							<button className="btn">Education</button>
+					<li className="nav-item active">
+						<Link className="nav-item btn btn-success" to="/education">
+							Education
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/generalrecipes">
-							<button className="btn">General Recipes</button>
+						<Link className="nav-item btn btn-success" to="/generalrecipes">
+							General Recipes
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/addrestaurant">
-							<button className="btn">Upload your restaurant!</button>
+						<Link className="nav-item btn btn-success" to="/addrestaurant">
+							Upload your restaurant!
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/jointhecommunity">
-							<button className="btn"> Join the community!</button>
+						<Link className="nav-item btn btn-success" to="/jointhecommunity">
+							Join the community!
 						</Link>
 					</li>
-					<li className="nav-item dropdown">
+					<li className="nav-item dropdown ml-auto">
 						<a
 							className="nav-link dropdown-toggle"
 							href="#"
@@ -117,17 +121,17 @@ export const Navbar = () => {
 							aria-expanded="false">
 							Hello, Sign in
 						</a>
-						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
+						<div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 							<Link to="/createrecipe">
 								<button className="dropdown-item" href="#">
 									Upload your Recipe
 								</button>
 							</Link>
-							<Link to="/myreviews">
+							{/* <Link to="/myreviews">
 								<a className="dropdown-item" href="#">
 									My Reviews
 								</a>
-							</Link>
+							</Link> */}
 							{/* <Link to="/myfavorites">
 								<a className="dropdown-item" href="#">
 									My Favorites

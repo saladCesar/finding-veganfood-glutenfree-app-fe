@@ -14,7 +14,7 @@ export const GeneralRecipes = props => {
 				<h2 className="text-center mr-auto ml-auto p-4">
 					Check out the recipes uploaded by the FoodCast Community!
 				</h2>
-				<div className="row ml-auto mr-auto">
+				<div className="row ml-auto mr-auto justify-content-center">
 					<div className="col-3 my-3">
 						<div className="card" style={{}}>
 							<div
@@ -88,7 +88,7 @@ export const GeneralRecipes = props => {
 						</div>
 					</div>
 				</div>
-				<div className="row m-auto">
+				<div className="row m-auto justify-content-center">
 					<div className="col-3 my-3">
 						<div className="card" style={{}}>
 							<div

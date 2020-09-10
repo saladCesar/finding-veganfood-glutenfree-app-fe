@@ -34,7 +34,8 @@ export const Rewards = props => {
 				style={{
 					backgroundImage: `url(${coupon})`,
 					backroundPosition: "center",
-					backgroundSize: "cover",
+					backgroundSize: "contain",
+					backgroundRepeat: "no-repeat",
 					width: "100%",
 					height: "10px"
 				}}
