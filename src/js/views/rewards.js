@@ -34,18 +34,16 @@ export const Rewards = props => {
 				style={{
 					backgroundImage: `url(${coupon})`,
 					backroundPosition: "center",
-					backgroundSize: "cover",
+					backgroundSize: "contain",
+					backgroundRepeat: "no-repeat",
 					width: "100%",
 					height: "10px"
 				}}
 			/>
-			<div className="text">
-				<Link to="/">
-					<button className="btn btn-success btn-lg" href="#" role="button">
-						Back
-					</button>
-				</Link>
-			</div>
+
+			<Link className="btn btn-success btn-lg m-auto w-25" to="/">
+				Back
+			</Link>
 		</>
 	);
 };

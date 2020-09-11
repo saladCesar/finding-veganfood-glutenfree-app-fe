@@ -39,31 +39,32 @@ export const CreateRecipe = () => {
 				{/* <form>onSubmit={handleSubmit} */}
 				<form>
 					<div className="form-group">
-						<label>Name of the dish</label>
+						<h4>Name of the dish:</h4>
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Vegan - Gluten Free - Both"
+							placeholder="Name your creation!"
 							value={diet}
 							onChange={event => setDiet(event.target.value)}
 						/>
 					</div>
 					<div className="form-group">
-						<label>Upload a photo</label>
+						<h4>Upload a photo:</h4>
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Browse.."
+							placeholder="Example.."
 							value={images}
 							onChange={event => setImages(event.target.value)}
 						/>
 					</div>
 					<div className="form-group">
-						<label>Ingredients</label>
-						<input
-							type="text"
+						<h4>Ingredients:</h4>
+						<textarea
 							className="form-control"
-							placeholder="Enter ingredients"
+							rows="5"
+							type="text"
+							placeholder="Enter ingredients used"
 							value={recipeIngredients}
 							onChange={event => setRecipeIngredients(event.target.value)}
 						/>
@@ -79,11 +80,12 @@ export const CreateRecipe = () => {
 						/>
 					</div> */}
 					<div className="form-group">
-						<label>Description</label>
-						<input
-							type="text"
+						<h4>Description:</h4>
+						<textarea
 							className="form-control"
-							placeholder="description of the recipe"
+							rows="5"
+							type="text"
+							placeholder="Please describe your steps"
 							value={recipeDescription}
 							onChange={event => setRecipeDescription(event.target.value)}
 						/>
@@ -100,9 +102,9 @@ export const CreateRecipe = () => {
 									recipeDescription
 								)
 							}
-							className="btn btn-primary form-control"
+							className="btn btn-success form-control"
 							type="button">
-							save
+							Save
 						</button>
 					</Link>
 				</form>

@@ -10,8 +10,11 @@ import stuffedpeppersImage from "../../img/vegan/stuffedd-peppers.jpg";
 export const GeneralRecipes = props => {
 	return (
 		<>
-			<div className="container">
-				<div className="row">
+			<div className="container m-auto col-9">
+				<h2 className="text-center mr-auto ml-auto p-4">
+					Check out the recipes uploaded by the FoodCast Community!
+				</h2>
+				<div className="row ml-auto mr-auto justify-content-center">
 					<div className="col-3 my-3">
 						<div className="card" style={{}}>
 							<div
@@ -73,7 +76,7 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Salmon</h5>
+								<h5 className="card-title">Salmon with Gluten Free Rice</h5>
 								<p className="card-text">
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
@@ -85,7 +88,7 @@ export const GeneralRecipes = props => {
 						</div>
 					</div>
 				</div>
-				<div className="row">
+				<div className="row m-auto justify-content-center">
 					<div className="col-3 my-3">
 						<div className="card" style={{}}>
 							<div
@@ -160,10 +163,8 @@ export const GeneralRecipes = props => {
 					</div>
 				</div>
 			</div>
-			<Link to="/">
-				<button className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</button>
+			<Link className="btn btn-success btn-lg m-auto w-25" to="/">
+				Back
 			</Link>
 		</>
 	);
