@@ -193,11 +193,11 @@ export const JoinTheCommunity = props => {
 					</div>
 				</div>
 			</div>
-			<Link to="/">
+			{/* <Link to="/">
 				<button className="btn btn-primary btn-lg" href="#" role="button">
 					Back home
 				</button>
-			</Link>
+			</Link> */}
 		</>
 	);
 };

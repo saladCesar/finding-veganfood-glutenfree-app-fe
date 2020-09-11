@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { Context } from "../store/appContext";
 import logoFoodCast from "../../img/logo/logo-noback.jpg";
-import foodcast from "../../img/logo/onlyfoodcast.jpg";
+import foodcast from "../../img/logo/logo.jpg";
 
 export const Titleandsearch = () => {
 	const { store, actions } = useContext(Context);
