@@ -118,29 +118,31 @@ export const Navbar = () => {
 							Hello, Sign in
 						</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a className="dropdown-item" href="#">
-								<Link to="/createrecipe">
-									<button className="dropdown-item">Upload recipe</button>
-								</Link>
-							</a>
+							<Link to="/createrecipe">
+								<button className="dropdown-item" href="#">
+									Upload your Recipe
+								</button>
+							</Link>
 							<Link to="/myreviews">
 								<a className="dropdown-item" href="#">
 									My Reviews
 								</a>
 							</Link>
-							<Link to="/myfavorites">
+							{/* <Link to="/myfavorites">
 								<a className="dropdown-item" href="#">
 									My Favorites
 								</a>
-							</Link>
+							</Link> */}
 							<Link to="/communityrecipes">
 								<button className="dropdown-item" href="#">
 									My Recipes
 								</button>
 							</Link>
-							<a className="dropdown-item" href="#">
-								Rewards
-							</a>
+							<Link to="/rewards">
+								<a className="dropdown-item" href="#">
+									Rewards
+								</a>
+							</Link>
 
 							<div className="dropdown-divider" />
 							<Link to="/createprofile">

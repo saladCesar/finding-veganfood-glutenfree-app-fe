@@ -35,7 +35,7 @@ export const Createprofile = () => {
 		<>
 			<div className="container">
 				<div>
-					<h1 className="text-center mt-5">Please create your profilecrea</h1>
+					<h1 className="text-center mt-5">Please create your profile</h1>
 					<form onSubmit={handleSubmit}>
 						<div className="form-group">
 							<label>Full Name</label>
@@ -97,17 +97,14 @@ export const Createprofile = () => {
 								onChange={event => setAvatar(event.target.value)}
 							/>
 						</div>
-						<button type="submit" className="btn btn-primary form-control">
-							save
+						<button type="submit" className="btn btn-success form-control">
+							Save and create profile
 						</button>
-						<Link className="mt-3 w-100 text-center" to="/">
-							or get back to contacts
-						</Link>
 					</form>
 				</div>
 			</div>
 			<Link to="/">
-				<button className="btn btn-primary btn-lg" href="#" role="button">
+				<button className="btn btn-success btn-lg" href="#" role="button">
 					Back home
 				</button>
 			</Link>

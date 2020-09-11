@@ -81,7 +81,7 @@ export const Education = props => {
 								{" "}
 								<li className="list-group-item"></li>
 							</h4>
-							<h5>Vegan</h5>
+							<h5>Gluten-Free</h5>
 							<div className="vegan-body">
 								<div className="row">
 									<div className="vegan-text col-6">
