@@ -139,7 +139,7 @@ export const AddRestaurant = () => {
 					</button> */}
 					<Link className="mt-3 w-100 text-center" to="/">
 						<button type="submit" className="btn btn-success form-control">
-							Upload your restaurant (You will be contacted after approval)
+							Upload your restaurant (You will be contacted upon approval)
 						</button>
 					</Link>
 				</form>
