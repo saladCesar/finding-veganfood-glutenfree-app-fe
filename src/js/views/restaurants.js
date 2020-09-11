@@ -37,10 +37,8 @@ export const Restaurants = props => {
 					);
 				})}
 			</ul>
-			<Link to="/restaurants">
-				<button className="btn btn-primary btn-lg" href="#" role="button">
-					Back
-				</button>
+			<Link className="btn btn-success btn-lg" to="/restaurants">
+				Back to Search
 			</Link>
 		</div>
 	);

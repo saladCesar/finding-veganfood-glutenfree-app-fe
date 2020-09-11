@@ -49,7 +49,7 @@ export const Login = props => {
 			<Link to="/">
 				<button
 					onClick={() => actions.login(email, password)}
-					className="btn btn-lg btn-primary btn-block"
+					className="btn btn-lg btn-success btn-block"
 					type="submit">
 					Sign in
 				</button>
