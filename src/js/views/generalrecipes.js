@@ -28,13 +28,17 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Gluten free Mac and Cheese</h5>
+								<h4 className="card-title">Gluten free Mac and Cheese</h4>
 								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+									Cheesy gluten-free deliciousness that is super easy to make. Kid-approved!
+									<br />
+									You can use your hands or a food processor to turn toast into crumbs for the
+									topping.
+									<br />
+									If you do not desire a crunchy topping, place reserved 1 cup shredded Cheddar
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Gluten free delicious Pizza</small>
+									<small className="text-muted">Uploaded by Ernesto</small>
 								</p>
 							</div>
 						</div>
@@ -52,13 +56,16 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Gluten Free Delicious Pizza</h5>
+								<h4 className="card-title">Gluten Free Delicious Pizza</h4>
 								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+									Perfectly thick and chewy, and no kneading required, this quick and simple
+									gluten-free pizza recipe recipe will have you adding pizza into your regular meal
+									rotation.
+									<br />
+									Luckily you now have a fantastic gluten-free pizza crust recipe.
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Uploaded by Kevin</small>
 								</p>
 							</div>
 						</div>
@@ -76,13 +83,15 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Salmon with Gluten Free Rice</h5>
+								<h4 className="card-title">Salmon with Gluten Free Rice</h4>
 								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+									A salmon rice bowl that’s so flavorful, filling and full of good-for-you
+									ingredients! Tender Atlantic salmon, roasted tomatoes, fresh herbs, healthy seeds
+									and homemade dressing satisfy the savory cravings in under 30 minutes.
+									<br />I definitely suggest trying my version!
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Uploaded by Paolo</small>
 								</p>
 							</div>
 						</div>
@@ -102,13 +111,16 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Vegan backed Zuchini</h5>
+								<h4 className="card-title">Vegan backed Zuchini</h4>
 								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+									Many breaded zucchini chip recipes call for eggs, milk or other ingredients that
+									aren`t vegan. But you don`t actually need animal byproducts in order to make a tasty
+									breaded zucchini chip snack.
+									<br />
+									Here`s an easy way to make them!
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Uploaded by Cesar</small>
 								</p>
 							</div>
 						</div>
@@ -126,13 +138,16 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Vegan Macaroni Salad</h5>
+								<h4 className="card-title">Vegan Macaroni Salad</h4>
 								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+									Usually the things are laden with heavy dairy products, but not this one! It`s
+									completely dairy-free and loaded with the perfect combo of crispy veg. Pasta heaven
+									in a bowl. Plus, it comes with a VIDEO!
+									<br />
+									So stay tuned for more in the near future!
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Uploaded by Marie</small>
 								</p>
 							</div>
 						</div>
@@ -150,13 +165,15 @@ export const GeneralRecipes = props => {
 								}}
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Vegan stuffed peppers</h5>
+								<h4 className="card-title">Vegan stuffed peppers</h4>
 								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+									Italian Vegan Stuffed Peppers features a colorful mix of veggies, flavorful herbs
+									and protein rich tempeh for a hearty and delicious lunch, dinner or meal prep idea!
+									<br />
+									Meet my new favorite stuffed peppers recipe, we just needed another variation!
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Uploaded by Emily</small>
 								</p>
 							</div>
 						</div>
