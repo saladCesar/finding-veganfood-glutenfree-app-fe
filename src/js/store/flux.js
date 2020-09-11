@@ -1,4 +1,5 @@
 // const backendUrl = "https://3000-c340f1e8-1798-4b26-832d-8713dea868db.ws-us02.gitpod.io/";
+import acaibo from "../../img/vegan/acaibowl.jpg";
 const backendUrl = "https://3000-c340f1e8-1798-4b26-832d-8713dea868db.ws-us02.gitpod.io/";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -73,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 
 					body: JSON.stringify({
-						images: "https://cdn.loveandlemons.com/wp-content/uploads/2017/10/vegan-pasta.jpg", // when you want replace this string with b without ""
+						images: acaibo, // when you want replace this string with b without ""
 						diet: a,
 						video_recipe_link: d,
 						recipe_ingredients: c,
